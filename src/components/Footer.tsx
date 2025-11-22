@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-white py-12 border-t border-gray-200">
+    <footer className="w-full bg-white pt-12 pb-6 border-t border-gray-200">
       <div className="section-container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           {/* Logo and Head Office */}
@@ -12,7 +12,7 @@ const Footer = () => {
               <img 
                 src="/logo.svg" 
                 alt="Pulse Robot Logo" 
-                className="h-8" 
+                className="h-12" 
               />
             </Link>
             <h3 className="font-bold text-gray-900 mb-3">Head Office</h3>
