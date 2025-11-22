@@ -22,31 +22,38 @@ const OnGoingRnD = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <main className="pt-24 pb-16">
-        <div className="section-container">
-          <div className="text-center mb-12 animate-fade-in">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">On Going R&D</h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Explore our cutting-edge research and development projects in UAV technology
+      <main className="pt-24 pb-8 sm:pb-12 bg-white">
+        <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+          <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 animate-fade-in">
+            <h2 className="text-3xl sm:text-4xl font-display font-bold tracking-tight text-gray-900 mb-3 sm:mb-4">
+              On Going R&D
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600">
+              Pioneering advanced UAV platforms through innovative research and development. 
+              Our cutting-edge projects push the boundaries of aerial technology.
             </p>
           </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
             {projects.map((project, index) => (
               <Link
                 key={index}
                 to={project.link}
-                className="glass-card group hover:scale-105 transition-all duration-300"
+                className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-elegant hover:shadow-elegant-hover transition-all duration-300 group animate-fade-in"
               >
-                <div className="aspect-video mb-4 overflow-hidden rounded-lg">
-                  <img
+                <div className="w-full">
+                  <img 
                     src={project.image}
-                    alt={project.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    alt={`${project.name} - Advanced UAV system`}
+                    className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <h3 className="text-2xl font-bold mb-3 capitalize">{project.name}</h3>
-                <p className="text-gray-600">{project.description}</p>
+                <div className="bg-white p-4 sm:p-8">
+                  <h3 className="text-xl sm:text-2xl font-display font-semibold mb-3 sm:mb-4 capitalize">{project.name}</h3>
+                  <p className="text-gray-700 text-sm sm:text-base">
+                    {project.description}
+                  </p>
+                </div>
               </Link>
             ))}
           </div>
