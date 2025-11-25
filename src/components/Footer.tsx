@@ -5,16 +5,21 @@ const Footer = () => {
   return (
     <footer className="w-full bg-white pt-12 pb-6 border-t border-gray-200">
       <div className="section-container">
+        {/* Logo Section */}
+        <div className="flex justify-center mb-12">
+          <Link to="/">
+            <img 
+              src="/logo.svg" 
+              alt="Pulse Robot Logo" 
+              className="h-16" 
+            />
+          </Link>
+        </div>
+
+        {/* Columns Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
-          {/* Logo and Head Office */}
+          {/* Head Office */}
           <div className="lg:col-span-1">
-            <Link to="/" className="block mb-6">
-              <img 
-                src="/logo.svg" 
-                alt="Pulse Robot Logo" 
-                className="h-12" 
-              />
-            </Link>
             <h3 className="font-bold text-gray-900 mb-3">Head Office</h3>
             <address className="text-sm text-gray-600 not-italic leading-relaxed">
               Austin Arena, Bhumkar Chowk Rd,<br />
